@@ -1,0 +1,98 @@
+.stApp{
+
+background:#F4F7FA;
+
+}
+
+section[data-testid="stSidebar"]{
+
+background:#0F4C81;
+
+}
+div[data-testid="metric-container"]{
+
+background:white;
+
+border-radius:18px;
+
+padding:22px;
+
+border-top:5px solid #FF8A00;
+
+box-shadow:0 8px 20px rgba(0,0,0,.06);
+
+transition:.25s;
+
+}
+div[data-testid="metric-container"]:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 14px 28px rgba(0,0,0,.12);
+
+}
+
+.stButton>button{
+
+height:55px;
+
+border-radius:14px;
+
+font-weight:600;
+
+font-size:15px;
+
+}
+
+.stButton>button:hover{
+
+background:#F57C00;
+
+}
+
+div[data-testid="stMetricValue"]{
+
+font-size:34px;
+
+}
+
+div[data-testid="stMetricLabel"]{
+
+font-size:15px;
+
+font-weight:600;
+
+}
+
+hr{
+
+margin-top:10px;
+
+margin-bottom:30px;
+
+}
+section[data-testid="stSidebar"]{
+
+    background:#0F4C81;
+
+    width:255px !important;
+
+    border-right:1px solid rgba(255,255,255,.08);
+
+}
+/* Remove option menu background */
+
+.st-emotion-cache-1r6slb0,
+.st-emotion-cache-16txtl3,
+.st-emotion-cache-1kyxreq{
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+.stProgress > div > div{
+
+height:12px;
+
+border-radius:20px;
+
+}
