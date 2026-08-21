@@ -1,0 +1,183 @@
+/* ==========================================================================
+   Construction Intelligent Hub — Premium Stylesheet
+   ========================================================================== */
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+/* CSS Variables */
+:root {
+    --bg-gradient-dark: linear-gradient(135deg, #11141a 0%, #171d26 100%);
+    --card-bg-dark: rgba(30, 39, 51, 0.65);
+    --border-color-dark: rgba(255, 140, 0, 0.15);
+    --text-primary-dark: #f3f4f6;
+    --text-secondary-dark: #9ca3af;
+    
+    --bg-gradient-light: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+    --card-bg-light: rgba(255, 255, 255, 0.85);
+    --border-color-light: rgba(255, 140, 0, 0.12);
+    --text-primary-light: #1f2937;
+    --text-secondary-light: #4b5563;
+
+    --safety-orange: #FF8C00;
+    --safety-yellow: #FFCC00;
+    --success-green: #10B981;
+    --danger-red: #EF4444;
+    --glow-color: rgba(255, 140, 0, 0.35);
+    
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-body: 'Outfit', sans-serif;
+}
+
+/* Global Font Override */
+.stApp {
+    font-family: var(--font-body) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading) !important;
+    font-weight: 700 !important;
+}
+
+/* Glassmorphism Card Style for Forms & Dashboards */
+.auth-card {
+    background: var(--card-bg-dark);
+    border: 1px solid var(--border-color-dark);
+    border-radius: 16px;
+    padding: 35px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    margin-bottom: 25px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.auth-card:hover {
+    border-color: var(--safety-orange);
+    box-shadow: 0 12px 40px 0 var(--glow-color);
+    transform: translateY(-2px);
+}
+
+/* Light Theme Card adjustments */
+.light-theme .auth-card {
+    background: var(--card-bg-light);
+    border: 1px solid var(--border-color-light);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.08);
+}
+
+.light-theme .auth-card:hover {
+    border-color: var(--safety-orange);
+    box-shadow: 0 12px 40px 0 rgba(255, 140, 0, 0.15);
+}
+
+/* Gradient Header Text */
+.gradient-text {
+    background: linear-gradient(90deg, var(--safety-orange) 0%, var(--safety-yellow) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+/* Styled Subtitle */
+.subtitle-text {
+    color: var(--text-secondary-dark);
+    font-size: 1.1rem;
+    margin-top: -10px;
+    margin-bottom: 30px;
+}
+
+/* Modern Input Styling for Streamlit text inputs */
+div[data-baseweb="input"] {
+    background-color: rgba(17, 20, 26, 0.5) !important;
+    border: 1px solid var(--border-color-dark) !important;
+    border-radius: 8px !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+div[data-baseweb="input"]:focus-within {
+    border-color: var(--safety-orange) !important;
+    box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.2) !important;
+}
+
+/* Primary Button Styling */
+button[kind="primary"] {
+    background: linear-gradient(90deg, var(--safety-orange) 0%, #e07b00 100%) !important;
+    border: none !important;
+    color: white !important;
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+    padding: 10px 24px !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 0 4px 14px 0 rgba(255, 140, 0, 0.3) !important;
+}
+
+button[kind="primary"]:hover {
+    background: linear-gradient(90deg, #e07b00 0%, var(--safety-orange) 100%) !important;
+    box-shadow: 0 6px 20px 0 rgba(255, 140, 0, 0.5) !important;
+    transform: translateY(-1px);
+}
+
+button[kind="primary"]:active {
+    transform: translateY(1px);
+}
+
+/* Dashboard Stat Cards */
+.stat-card {
+    background: linear-gradient(135deg, rgba(30, 39, 51, 0.8) 0%, rgba(20, 26, 36, 0.8) 100%);
+    border: 1px solid var(--border-color-dark);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    border-color: var(--safety-yellow);
+    transform: scale(1.02);
+}
+
+.stat-title {
+    color: var(--text-secondary-dark);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stat-value {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+/* Custom Alert Styling */
+.custom-alert {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 4px solid transparent;
+}
+
+.custom-alert-success {
+    background-color: rgba(16, 185, 129, 0.1);
+    border-left-color: var(--success-green);
+    color: #a7f3d0;
+}
+
+.custom-alert-error {
+    background-color: rgba(239, 68, 68, 0.1);
+    border-left-color: var(--danger-red);
+    color: #fca5a5;
+}
+
+/* Micro-animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-ui {
+    animation: fadeIn 0.5s ease-out forwards;
+}
