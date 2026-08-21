@@ -1,0 +1,6 @@
+{
+  "name": "Construction Intelligence Hub",
+  "description": "Real-time construction project tracking, AI analytics, resource management, role-based dashboards, secure BIM repository, offline field engineer suite, and API developer sandbox.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
